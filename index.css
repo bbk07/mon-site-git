@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Miss+Fajardose&family=Princess+Sofia&display=swap');
+
+/*********************************** TITRES ********************************/
+ 
+h1, h2, h3, .content {
+  text-align: center; 
+}
+
+h1, h2, h3{
+  font-size: 200 em;
+  text-align:center; justify-content: center;
+}
+/********************************* HTML BODY ********************************/
+
+html{
+  width: 100%;  
+  margin:0;
+  padding: 0;
+  
+}
+body{
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin: 0;
+  background-color:#7A90A4;
+  width: 100%;
+} 
+/* COULEURS{
+  background-color: 
+ #BD3100, #EB9F04, #F3BB00, #8BA503, #FC4E00
+
+ #137C8B, #709CA7, #B8CBD0, #7A90A4, #344D59
+*/
+
+/*********************************** NAVBAR ********************************/
+.navbar{ 
+  background-color:#709CA7;
+  height: 120px;
+  z-index: 2;
+
+  
+}
+#logo{ 
+  position:relative;
+  top:90px;
+  right:-20px;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+
+
+/*********************************** HEADER ********************************/
+
+
+.title{
+  z-index: 1;
+  font-size: 13em;
+  font-weight: 900;
+  text-align: center;
+  color:#709CA7;
+  animation: title 5s ease-in;
+  font-family: Princess Sofia;
+  /*text-shadow: 5px 2px 5px #B8CBD0;*/
+}
+
+
+@keyframes title{
+  0% {
+      transform: translateY(-500px) rotate(0deg);
+      top: 100px;
+      
+  }
+
+  25%{transform: translateY(-250px) rotate(50deg);
+      top: 100px;
+      
+
+  }
+
+  50% { transform: translateY(-200px) rotate(-30deg);       
+        top: 80px;
+        
+
+  }
+  100% { opacity: 1;
+        transform: translateY(0px) rotate(0deg);
+        top: 0px;
+        
+       
+  }
+}
+
+/***************************CAROUSSEL******************************/
+
+@keyframes carousel {
+  0% {
+   
+    opacity: 0;
+  }
+  50% {
+    
+    opacity: 1;
+  }
+ 
+  100% {
+    
+    opacity: 0;
+  }
+}
+
+.carousel1 {
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  margin-top: 15vh;
+}
+
+.carousel1 > .carousel-items-1 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 100px);
+  opacity: 0;
+    
+}
+.carousel1:hover > .carousel-items-1{
+  animation: carousel 10s infinite;
+}
+
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+img:nth-child(5) {
+  animation-delay: 8s;
+}
+
+/*********************************** MAIN ********************************/
+
+
+
+main .rounded-circle{
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+ 
+  
+}
+
+.part h2{
+  color: #B8CBD0 ;
+  font-size: 3em;
+  font-weight: bolder;
+  opacity: 0.6;
+}
+
+/*********************************** FOOTER ********************************/
+footer{
+  margin-top: 40px;
+  height: 80px;
+  width: 100%;
+  background-color:#709CA7 ;  
+}
+#copyright{
+  position: relative;
+
+}
+
+
+
+
+
+
+
+
